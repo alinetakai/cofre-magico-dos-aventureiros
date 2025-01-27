@@ -1,0 +1,106 @@
+<!--ATENÇÃO! Este é um template para você completar a atividade proposta.
+Lembre de baixar este arquivo e renomeá-lo para index.html, para que
+funcione corretamente e possa testá-lo e gerar uma page posteriormente-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Cofre Mágico</title>
+
+  <!--Essa é apenas uma sugestão para estilização, você pode e deve personalizá-la-->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      text-align: center;
+      margin: 20px;
+    }
+    .container {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+    }
+    input[type="text"] {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 10px 0;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>O Cofre Mágico</h1>
+    <p>Responda com "sim" ou "não" para abrir o cofre mágico!</p>
+    <form id="cofreForm">
+      <label for="questao1">1. O número secreto é maior que 5?</label><br>
+      <input type="text" id="questao1" required><br>
+      
+      <label for="questao2">2. O número secreto é par?</label><br>
+      <input type="text" id="questao2" required><br>
+      
+      <label for="questao3">3. O número secreto é um múltiplo de 3?</label><br>
+      <input type="text" id="questao3" required><br>
+      
+      <button type="button" onclick="verificarCofre()">Abrir Cofre</button>
+    </form>
+    <div id="resultado" class="result"></div>
+  </div>
+
+  <script>
+    function verificarCofre() {
+      // Respostas do jogador
+      const resposta1 = document.getElementById("questao1").value.toLowerCase();
+      //ATIVIDADE 1: com base no código acima, crie mais duas constantes para a resposta2 e resposta3
+      
+      
+
+      // Regras do jogo
+      const numeroMaiorQue5 = true;
+      //ATIVIDADE 2: com base no código acima, crie mais duas constantes:
+      //numeroPar (recebe um valor falso) e numeroMultiploDe3 (recebe um valor verdadeiro)
+      //Se quiser você também pode personalizar os valores a serem recebidos, para mudar
+      //a combinação de respostas
+      
+      
+
+      // Avaliar respostas
+      //ATIVIDADE 3: A constante respostaCorreta deve receber os seguintes valores:
+      // (se resposta1 for sim e numemeroMaiorQue5)
+      //e (resposta2 for não e não for numeroPar)
+      //e (resposta3 for sim e for numeroMultiploDe3)
+      const respostaCorreta = //complete aqui o código//
+
+      // Exibir resultado
+      const resultadoDiv = document.getElementById("resultado");
+
+      if (respostaCorreta) {
+        resultadoDiv.textContent = "Parabéns! Você abriu o cofre mágico!";
+        resultadoDiv.style.color = "green";
+      } else {
+        resultadoDiv.textContent = "Ops! A combinação está errada. Tente novamente!";
+        resultadoDiv.style.color = "red";
+      }
+    }
+  </script>
+</body>
+</html>
